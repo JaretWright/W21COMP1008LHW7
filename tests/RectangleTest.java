@@ -31,10 +31,53 @@ class RectangleTest {
     }
 
     @Test
+    void getArea()
+    {
+        //length = 20, width = 30.  Area = 20*30=600
+        double expResult = 20*30;
+        assertEquals(expResult, rectangle.getArea());
+    }
+
+    @Test
     void setLength() {
+        rectangle.setLength(75);
+        assertEquals(75, rectangle.getLength());
+    }
+
+    @Test
+    void setLengthInvalidLow() {
+        try{
+            rectangle.setLength(0);
+            fail("length of 0 should throw an Exception");
+        }
+        catch (IllegalArgumentException exception)
+        {
+            System.out.println(exception.getMessage());
+        }
+    }
+
+    @Test
+    void setLengthInvalidHigh() {
+        try{
+            rectangle.setLength(100);
+            fail("length of 100 should throw an Exception");
+        }
+        catch (IllegalArgumentException e)
+        {
+            System.out.println(e.getMessage());
+        }
     }
 
     @Test
     void setWidth() {
+        rectangle.setWidth(40);
+        assertEquals(40, rectangle.getWidth());
+    }
+
+    @Test
+    void setWidthInvalidLow()
+    {
+        assertThrows(IllegalArgumentException.class, ()->
+                rectangle.setWidth(0));
     }
 }

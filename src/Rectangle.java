@@ -8,7 +8,12 @@ public class Rectangle {
 
     public double getPerimeter()
     {
-        return 2*width+2*width;
+        return 2*width+2*length;
+    }
+
+    public double getArea()
+    {
+        return length*width;
     }
 
     public double getLength() {
@@ -16,7 +21,10 @@ public class Rectangle {
     }
 
     public void setLength(double length) {
-        this.length = length;
+        if (length>0 && length <100)
+            this.length = length;
+        else
+            throw new IllegalArgumentException("Length must be >0");
     }
 
     public double getWidth() {
@@ -24,6 +32,9 @@ public class Rectangle {
     }
 
     public void setWidth(double width) {
-        this.width = width;
+        if (width>0)
+            this.width = width;
+        else
+            throw new IllegalArgumentException("width must be greater than 0");
     }
 }

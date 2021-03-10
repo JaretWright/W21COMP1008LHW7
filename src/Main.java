@@ -7,14 +7,14 @@ public class Main {
         Rectangle rectangle1 = new Rectangle(30.23,82.3);
         Rectangle rectangle2 = new Rectangle(100,72);
 
-        ArrayList<Circle> shapes = new ArrayList();
+        ArrayList<TwoDimensionalShape> shapes = new ArrayList();
         shapes.add(circle1);
         shapes.add(circle2);
-//        shapes.add(rectangle1);
-//        shapes.add(rectangle2);
+        shapes.add(rectangle1);
+        shapes.add(rectangle2);
 
         //loop over the ArrayList and display the area for each shape
-        for (Circle shape : shapes)
+        for (TwoDimensionalShape shape : shapes)
             System.out.printf("%s - area: %.2f%n",shape,shape.getArea());
     }
 }

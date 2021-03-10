@@ -22,7 +22,7 @@ public class Circle {
     }
 
     public String toString(){
-        return "Circle with radius "+ getRadius();
-//        return String.format("Circle with radius %.1f", radius);
+//        return "Circle with radius "+ getRadius();
+        return String.format("Circle with radius %.1f", radius);
     }
 }

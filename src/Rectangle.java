@@ -42,4 +42,9 @@ public class Rectangle {
     {
         return length == width;
     }
+
+    public String toString()
+    {
+        return String.format("%.1f by %.1f rectangle",length, width);
+    }
 }

@@ -80,4 +80,16 @@ class RectangleTest {
         assertThrows(IllegalArgumentException.class, ()->
                 rectangle.setWidth(0));
     }
+
+    @Test
+    void isSquareTrue()
+    {
+        assertTrue(square.isSquare());
+    }
+
+    @Test
+    void isSquareFalse()
+    {
+        assertFalse(rectangle.isSquare());
+    }
 }

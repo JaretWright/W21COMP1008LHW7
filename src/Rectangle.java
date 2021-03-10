@@ -37,4 +37,9 @@ public class Rectangle {
         else
             throw new IllegalArgumentException("width must be greater than 0");
     }
+
+    public boolean isSquare()
+    {
+        return length == width;
+    }
 }
